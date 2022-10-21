@@ -1,7 +1,7 @@
 {
-  "name": "@mfe/app-home",
+  "name": "@mfe/app-login",
   "scripts": {
-    "start": "webpack serve --port 8310",
+    "start": "webpack serve --port 8300",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently yarn:build:*",
     "build:webpack": "webpack --mode=production",
@@ -58,5 +58,5 @@
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9"
   },
-  "types": "dist/mfe-app-home.d.ts"
+  "types": "dist/mfe-app-login.d.ts"
 }
