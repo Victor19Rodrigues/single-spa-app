@@ -1,0 +1,20 @@
+import { FC, MouseEvent } from 'react'
+import { navigateToUrl } from 'single-spa'
+import { Container } from './styles'
+import { NavigateProps } from './types'
+
+export function Navigate({ path, children }: NavigateProps) {
+  function redirect(e: MouseEvent<HTMLButtonElement>) {
+    navigateToUrl(e.currentTarget.name)
+  }
+
+  return (
+    <Container
+      name={path}
+      onClick={redirect}
+      aria-label={`Go to Page ${children}`}
+    >
+      {children}
+    </Container>
+  )
+}
