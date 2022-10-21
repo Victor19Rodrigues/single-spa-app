@@ -5,7 +5,7 @@ export const Container = styled.header`
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 4.8rem 4.8rem 0 4.8rem;
+  padding: 1.7rem 4.8rem 0 4.8rem;
 `
 
 export const Wrapper = styled.div`
