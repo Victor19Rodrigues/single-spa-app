@@ -6,7 +6,7 @@ export const auth$ = new BehaviorSubject({
   pending: false,
 })
 
-const GET_LOGGED_IN = (username: string, password: string) =>
+const GET_LOGGED_IN = (email: string, password: string) =>
   new Promise((resolve, _) => {
     auth$.next({
       sessionToken: null,
@@ -15,7 +15,7 @@ const GET_LOGGED_IN = (username: string, password: string) =>
     })
 
     setTimeout(() => {
-      if (username === 'exampleuser' && password === 'examplepassword') {
+      if (email === 'victor@gmail.com' && password === 'victor123') {
         const sessionToken = 'abc123def456'
 
         localStorage.setItem('@single-spa-app:sessionToken-1.0.0', sessionToken)
@@ -28,16 +28,16 @@ const GET_LOGGED_IN = (username: string, password: string) =>
       } else {
         resolve({
           sessionToken: null,
-          error: 'Invalid user or password',
+          error: 'Invalid email or password',
           pending: false,
         })
       }
     }, 2500)
   })
 
-export function login(username: string, password: string) {
+export function login(email: string, password: string) {
   if (!auth$.value.pending) {
-    GET_LOGGED_IN(username, password).then((user: any) => {
+    GET_LOGGED_IN(email, password).then((user: any) => {
       auth$.next(user)
     })
   }

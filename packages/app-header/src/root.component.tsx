@@ -18,7 +18,12 @@ export default function Root() {
       const needsLogin = !sessionToken
 
       if (needsLogin) {
+        setLogged(false)
         navigateToUrl(ROUTES.LOGIN)
+      }
+
+      if(!needsLogin) {
+        setLogged(true)
       }
 
       if (!needsLogin && window.location.pathname === ROUTES.LOGIN) {
