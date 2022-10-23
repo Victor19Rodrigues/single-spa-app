@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 124.8rem;
+  max-width: 250.8rem;
   border-bottom: 0.1rem solid #d8d8d8;
   padding-bottom: 1.7rem;
 `
