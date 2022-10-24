@@ -19,11 +19,19 @@ export const FormWrapper = styled.div`
   }
 
   .MuiInputLabel-root {
-    color: #707070;
+    color: #c4c4cc;
   }
 
   .MuiInputBase-root::after {
-    border-bottom: 2px solid #C4C4CC;
+    border-bottom: 2px solid #c4c4cc;
+  }
+
+  .MuiInputBase-root::before {
+    border-bottom: 2px solid #c4c4cc;
+  }
+
+  .MuiInputBase-root:hover {
+    border-bottom: 2px solid #8D8D99;
   }
 
   .MuiFormHelperText-root {

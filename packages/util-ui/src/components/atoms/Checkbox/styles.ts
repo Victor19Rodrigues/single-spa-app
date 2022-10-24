@@ -9,12 +9,18 @@ export const Container = styled.span`
   }
 
   input {
+    color: #c4c4cc;
+
     &:checked + svg {
-      color: #000;
+      color: #c4c4cc;
     }
   }
 
   .MuiTypography-root {
     font-size: 1.6rem;
+  }
+
+  .MuiCheckbox-root {
+    color: #c4c4cc;
   }
 `

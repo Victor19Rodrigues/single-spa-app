@@ -7,12 +7,12 @@ export const Container = styled.span`
 
   .MuiButtonBase-root {
     width: 100%;
-    background-color: #000;
+    background-color: #29292E;
     padding: 1.3rem;
     font-size: 1.6rem;
 
     &:hover {
-      background-color: #222;
+      background-color: #202024;
     }
   }
 `
