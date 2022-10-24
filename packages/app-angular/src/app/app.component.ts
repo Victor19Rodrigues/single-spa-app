@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app-angular';
+
+  isLogged = !!localStorage.getItem('@single-spa-app:sessionToken-1.0.0')
 }

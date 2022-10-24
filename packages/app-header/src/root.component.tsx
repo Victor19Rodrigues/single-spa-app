@@ -1,7 +1,7 @@
 // @ts-ignore
 import { Header } from '@mfe/util-ui'
 // @ts-ignore
-import { auth$ as auth, logout } from '@mfe/util-auth'
+import { auth$ as auth } from '@mfe/util-auth'
 import { useEffect, useState } from 'react'
 import { navigateToUrl } from 'single-spa'
 
