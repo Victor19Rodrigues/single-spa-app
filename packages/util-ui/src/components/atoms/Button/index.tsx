@@ -5,7 +5,7 @@ export function Button({ children, loading = false }) {
   return (
     <Container>
       <CustomButton variant='contained' type='submit'>
-        {loading ? <CircularProgress size={14} /> : children}
+        {loading ? <CircularProgress color='success' size={26} /> : children}
       </CustomButton>
     </Container>
   )

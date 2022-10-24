@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 
 export const Container = styled.button`
-  background-color: #fff;
+  background-color: #121214;
+  color: #c4c4cc;
   position: relative;
   cursor: pointer;
   font-size: 1.6rem;
@@ -11,10 +12,10 @@ export const Container = styled.button`
 
   &:hover {
     transition: color 0.1s linear;
-    color: #a18a68;
+    color: #8D8D99;
   }
 
   &:focus {
-    border: 0.2rem solid #000;
+    border: 0.2rem solid #c4c4cc;
   }
 `

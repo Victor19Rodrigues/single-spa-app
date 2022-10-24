@@ -21,6 +21,8 @@ html {
 
 body {
   font: normal 1.6rem "DM Sans", sans-serif;
+  background-color: #121214;
+  color: #C4C4CC;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -7,9 +7,10 @@ export const Wrapper = styled.span<IconProps>`
   justify-content: center;
   align-items: center;
   border: 0.2rem solid transparent;
-  background-color: #fff;
+  background-color: #121214;
   border-radius: 0.4rem;
   padding: 0.2rem;
+  color: #c4c4cc;
 
   ${({ cursorPointer }) => css`
     ${cursorPointer &&
@@ -17,7 +18,7 @@ export const Wrapper = styled.span<IconProps>`
       cursor: pointer;
 
       &:focus {
-        border: 0.2rem solid #000;
+        border: 0.2rem solid #c4c4cc;
       }
     `}
   `}

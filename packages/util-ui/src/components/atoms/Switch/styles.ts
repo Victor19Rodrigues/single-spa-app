@@ -32,7 +32,7 @@ export const SwitchButton = styled.button<{ isActiveSwitchButton: boolean }>`
       ? '1px 1px 4px rgba(0, 0, 0, 0.1)'
       : 'none'};
     border: 2px solid ${isActiveSwitchButton ? '#000' : '#202024'};
-    color: ${isActiveSwitchButton ? '#000' : '#C4C4CC'};
+    color: ${isActiveSwitchButton ? '#eee' : '#C4C4CC'};
   `}
 
   &:focus {

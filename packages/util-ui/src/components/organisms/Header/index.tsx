@@ -16,10 +16,10 @@ export function Header() {
         <GroupMenu>
           <Navigate path='/home' children='Home' />
 
-          <Separator dark maxHeight='1.7rem' />
+          <Separator maxHeight='1.7rem' />
 
           <Icon cursorPointer>
-            <Tooltip onClick={handleLogout} title="Logout">
+            <Tooltip onClick={handleLogout} arrow title='Logout' role='button'>
               <LogoutOutlined fontSize='large' />
             </Tooltip>
           </Icon>

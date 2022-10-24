@@ -1,12 +1,12 @@
-import { Container, ContainerHeader } from './styles'
+import { Container, ContainerHeader, Wrapper, Title } from './styles'
 // @ts-ignore
 import { Home } from '@mfe/util-ui'
 
 export default function Root() {
   return (
-    <>
+    <Wrapper>
       <ContainerHeader>
-        <h1>App React</h1>
+        <Title>App React</Title>
       </ContainerHeader>
       <Container>
         <Home />
@@ -15,6 +15,6 @@ export default function Root() {
         <Home />
         <Home />
       </Container>
-    </>
+    </Wrapper>
   )
 }

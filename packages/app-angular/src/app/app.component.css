@@ -10,5 +10,13 @@
 }
 
 .app-angular > .card:not(:first-child) {
-  padding-left: 2rem;
+  margin-left: 2rem;
+}
+
+.angular-container {
+  background-color: #121214;
+}
+
+.angular-title {
+  color: #C4C4CC;
 }
