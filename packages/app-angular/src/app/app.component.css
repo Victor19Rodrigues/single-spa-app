@@ -9,6 +9,6 @@
   display: flex;
 }
 
-.card :nth-child(2){
-  padding-left: 4rem;
+.app-angular > .card:not(:first-child) {
+  padding-left: 2rem;
 }

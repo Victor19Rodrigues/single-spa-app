@@ -1,7 +1,20 @@
-export default function Root(props) {
+import { Container, ContainerHeader } from './styles'
+// @ts-ignore
+import { Home } from '@mfe/util-ui'
+
+export default function Root() {
   return (
-    <section style={{ padding: '1.7rem 4.8rem 0 4.8rem' }}>
-      <h1>App React</h1>
-    </section>
+    <>
+      <ContainerHeader>
+        <h1>App React</h1>
+      </ContainerHeader>
+      <Container>
+        <Home />
+        <Home />
+        <Home />
+        <Home />
+        <Home />
+      </Container>
+    </>
   )
 }
