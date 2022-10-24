@@ -15,7 +15,7 @@ export const FormWrapper = styled.div`
   }
 
   label.Mui-focused {
-    color: #000;
+    color: #C4C4CC;
   }
 
   .MuiInputLabel-root {
@@ -23,7 +23,7 @@ export const FormWrapper = styled.div`
   }
 
   .MuiInputBase-root::after {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #C4C4CC;
   }
 
   .MuiFormHelperText-root {
@@ -34,5 +34,6 @@ export const FormWrapper = styled.div`
   input {
     height: 5.2rem;
     font-size: 1.6rem;
+    color: #C4C4CC;
   }
 `
