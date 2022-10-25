@@ -1,10 +1,16 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "single-spa-app",
+  "version": "1.0.0",
+  "description": "single-spa example that shows how to use a utility module to share some application state across other microfrontends",
   "scripts": {
-    "start": "lerna run --parallel start",
-    "build": "lerna run --parallel build",
-    "serve": "lerna run --parallel serve"
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run start --stream",
+    "prebuild": "rm -rf deploy && mkdir deploy deploy/util-auth deploy/util-ui deploy/app-footer deploy/app-angular deploy/app-home deploy/app-login deploy/app-header",
+    "build": "lerna run build",
+    "postbuild": "cp packages/root/dist/* deploy && cp packages/app-home/dist/* deploy/app-home && cp packages/app-footer/dist/* deploy/app-footer && cp packages/app-angular/dist/* deploy/app-angular && cp packages/app-angular/dist/* deploy/app-angular && cp packages/util-ui/dist/* deploy/util-ui && cp packages/util-auth/dist/* deploy/util-auth && cp packages/app-home/dist/* deploy/app-home && cp packages/app-login/dist/* deploy/app-login && cp packages/app-header/dist/* deploy/app-header",
+    "deploy": "yarn bootstrap && yarn build",
+    "preserve": "yarn build",
+    "serve": "npx serve deploy -s -n -C"
   },
   "devDependencies": {
     "lerna": "^5.0.0"

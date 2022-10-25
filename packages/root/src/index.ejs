@@ -9,8 +9,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
 
-  <!-- <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';"> -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src <% if(isLocal) { %> 'unsafe-eval' <% } %> 'unsafe-inline' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
   <meta name="importmap-type" content="systemjs-importmap" />
 
   <script type="systemjs-importmap">
@@ -37,30 +36,45 @@
 
   <% if (isLocal) { %>
     <script type="systemjs-importmap">
-    {
-      "imports": {
-        "@mfe/root-config": "//localhost:9000/mfe-root-config.js",
-        "@mfe/app-header": "//localhost:8100/mfe-app-header.js",
-        "@mfe/app-login": "//localhost:8300/mfe-app-login.js",
-        "@mfe/app-home": "//localhost:8310/mfe-app-home.js",
-        "@mfe/app-angular": "//localhost:8320/main.js",
-        "@mfe/app-footer": "//localhost:8330/mfe-app-footer.js",
-        "@mfe/util-ui": "//localhost:8500/mfe-util-ui.js",
-        "@mfe/util-auth": "//localhost:8510/mfe-util-auth.js"
+      {
+        "imports": {
+          "@mfe/root-config": "//localhost:9000/mfe-root-config.js",
+          "@mfe/app-header": "//localhost:8100/mfe-app-header.js",
+          "@mfe/app-login": "//localhost:8300/mfe-app-login.js",
+          "@mfe/app-home": "//localhost:8310/mfe-app-home.js",
+          "@mfe/app-angular": "//localhost:8320/main.js",
+          "@mfe/app-footer": "//localhost:8330/mfe-app-footer.js",
+          "@mfe/util-ui": "//localhost:8500/mfe-util-ui.js",
+          "@mfe/util-auth": "//localhost:8510/mfe-util-auth.js"
+        }
       }
-    }
-  </script>
-    <% } %>
+    </script>
+  <% } else { %>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@mfe/root-config": "/mfe-root-config.js",
+          "@mfe/app-header": "/app-header/mfe-app-header.js",
+          "@mfe/app-login": "/app-login/mfe-app-login.js",
+          "@mfe/app-home": "/app-home/mfe-app-home.js",
+          "@mfe/app-angular": "/app-angular/main.js",
+          "@mfe/app-footer": "/app-footer/mfe-app-footer.js",
+          "@mfe/util-ui": "/util-ui/mfe-util-ui.js",
+          "@mfe/util-auth": "/util-auth/mfe-util-auth.js"
+        }
+      }
+    </script>
+  <% } %>
       <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
       <% if (isLocal) { %>
         <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
-        <% } else { %>
-          <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
-          <% } %>
+      <% } else { %>
+        <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+      <% } %>
 
 </head>
 
