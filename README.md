@@ -29,6 +29,7 @@ This example consists of:
   - app-angular
   - app-footer
   - app-home
+- run `yarn start` ton run lerna
 - go to http://localhost:9000/
 - celebrate good times 🎉
 
